@@ -1,5 +1,5 @@
 // import { transaction } from "../../FktrTest.contracts.js";
-import { contract } from "../../sample.js";
+import { contract } from "../../json/sample.js";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });

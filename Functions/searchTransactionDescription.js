@@ -1,4 +1,4 @@
-import { brandName } from "./FashionBrandName.js";
+import { brandName } from "../json/FashionBrandName.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import fs from "fs/promises";
@@ -40,21 +40,6 @@ db.once("open", async () => {
         })
         .limit(10)
         .toArray();
-      // let bodies = [];
-
-      // if (result.length > 0) {
-      //   for (let j = 0; j < result.length; j++) {
-      //     const body = {
-      //       id: result[j]._id,
-      //       name: result[j].name,
-      //       description: result[j].description,
-      //     };
-      //     bodies.push(body);
-      //   }
-      //   console.log(`Found ${result.length} results for ${word}`);
-      // } else {
-      //   console.log(`No results for ${word}`);
-      // }
       console.log(`Found ${result.length} results for ${word}`);
       resultsByWord[word] = result;
     } catch (err) {

@@ -9,7 +9,7 @@ const app = express();
 
 //connecting to database
 database;
-setInterval(pushContract, 5000);
+setInterval(pushContract, 10000);
 
 // middlewares
 app.use(express.json());
