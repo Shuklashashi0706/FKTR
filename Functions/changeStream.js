@@ -53,9 +53,13 @@ db.once("open", () => {
               ],
             },
             {
-              $set: {
+              $unset: {
                 type: currentContract.Sector,
               },
+              $set:{
+                category:currentContract.Sector,
+                noUpdate:true,
+              }
             }
           );
           console.log(
